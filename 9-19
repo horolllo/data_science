@@ -1,0 +1,16 @@
+import csv
+f = open("person.csv", encoding = "euc=kr")
+data = csv.reader(f)
+next(data)
+
+area = input('동 단위로 검색:')
+for row in data:
+    row[1:] = map(int, row[1:])
+    if area in row[0]:
+        print("남자 전체", row[3:64])
+        print("여자 전체", row[66:])
+        print("남자 청소년", row[17:23])
+        print("여자 청소년", row[80:86])
+        break
+
+f.close()
