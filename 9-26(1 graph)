@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+
+number = [1203, 400, 1004, 561]
+label = ["spring", "summer", "fall", "winter"]
+color = ["mistyrose", "lightgreen", "salmon", "lightskyblue"]
+
+plt.title("Favorite season")
+plt.axis("equal")
+plt.pie(number, labels = label, autopct = "%.1f%%", colors = color, explode = (0, 0, 0, 0))
+plt.legend()
+plt.show()
