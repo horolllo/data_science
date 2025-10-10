@@ -1,0 +1,57 @@
+import matplotlib.pyplot as plt
+import csv
+import numpy as np
+
+f = open('class.csv')
+data = csv.reader(f)
+
+x = next(data)
+y = next(data)
+
+x = np.array(x[2:], dtype = int)
+y = np.array(y[2:], dtype = int)
+
+for row in data:
+    if '키'in row[1:]:
+        x = np.concatenate((x, np.array(row[2:], dtype = int), axis == None))
+    if '몸무게' in row[1:]:
+        y = np.concatenate((y, np.array(row[2:], dtype = int), axis == None))
+
+plt.scatter(x,y,c = y, cmap = 'jet')
+plt.colorbar()
+plt.show()
+
+
+
+
+
+
+
+"""
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randint(10, 100, 200)
+y = np.random.randint(10, 100, 200)
+size = np.random.random(100)*20
+
+plt.scatter(x,y,c = y, cmap = 'jet', alpha = 0.7)
+plt.colorbar()
+plt.show()
+
+
+
+
+
+
+
+
+import numpy as np
+
+a = ['1', '2', '3', '4']
+b = np.array(a)
+c = np.array(a, dtype = int)
+
+print(b)
+print(c)
+"""
