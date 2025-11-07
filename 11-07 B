@@ -1,0 +1,18 @@
+import pandas as pd
+import requests
+from io import StringIO
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.rc("font", family = "Malgun Gothic")
+
+data1 = {"subject":["국어", "영어", "수학", "코딩"], "score":[80,85,90,100]}
+
+ex_df1 = pd.DataFrame(data1)
+
+sns.barplot(data = ex_df1, x = "subject", y = "score")
+
+
+
+
+plt.show()
